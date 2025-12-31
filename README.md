@@ -1,7 +1,7 @@
-Project Overview
+## Project Overview
 This project aims to predict customer churn for SyriaTel, a telecommunications company. By building a classification model, we identify which customers are at risk of leaving and determine the primary factors driving their dissatisfaction. This allows SyriaTel to implement proactive retention strategies to minimize revenue loss.
 
-Business Problem
+## Business Problem
 In the highly competitive telecom industry, retaining existing customers is significantly cheaper than acquiring new ones. SyriaTel needs to know:
 
 Which customers are likely to terminate their contracts?
@@ -10,7 +10,7 @@ What behaviors (e.g., service calls, usage patterns, plan types) lead to churn?
 
 How can the company intervene effectively?
 
-Data Summary
+## Data Summary
 The dataset consists of 3,333 entries with 21 features. Key features include:
 
 Usage: Total minutes and charges for day, evening, night, and international calls.
@@ -23,15 +23,15 @@ Service: Number of calls made to customer service.
 
 Target: Churn (True/False).
 
-Data Preparation
+## Data Preparation
 Dropped Redundant Features: Removed phone number and all charge columns (due to perfect correlation with minutes) to prevent multicollinearity.
 
 Encoding: Transformed categorical variables using One-Hot Encoding.
 
 Scaling: Standardized features for the Logistic Regression model.
 
-Modeling and Evaluation
-We compared two classification models:
+## Modeling and Evaluation
+I compared two classification models:
 
 Logistic Regression (Baseline): Used class_weight='balanced' to handle the imbalanced dataset.
 
@@ -46,14 +46,14 @@ Precision (Churn): ~0.82 — When the model predicts churn, it is correct 82% of
 
 ROC-AUC: ~0.86 — Demonstrating strong ability to distinguish between classes.
 
-Key Insights
+## Key Insights
 Customer Service Calls: A critical "tipping point" exists at 4 calls; customers reaching this threshold are significantly more likely to churn.
 
 International Plan: Customers with this plan have a disproportionately higher churn rate, suggesting a potential issue with pricing or service quality in that tier.
 
 Day Minutes: High-usage day callers are more volatile, indicating that SyriaTel's most active users are also the most likely to switch providers.
 
-Recommendations
+## Recommendations
 Automated Intervention: Flag customers reaching their 3rd or 4th service call for immediate follow-up by a senior retention specialist.
 
 Plan Audit: Review the value proposition of the International Plan to compete better with other providers.

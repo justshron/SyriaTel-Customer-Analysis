@@ -1,4 +1,4 @@
-. Project Overview
+1. Project Overview
 This project aims to predict customer churn for SyriaTel, a telecommunications company. By building a classification model, we identify which customers are at risk of leaving and determine the primary factors driving their dissatisfaction. This allows SyriaTel to implement proactive retention strategies to minimize revenue loss.
 
 2. Business Problem
